@@ -1,0 +1,33 @@
+<section id="order" class="order">
+  <div class="container">
+    <div class="order-text">
+      <div class="order-text-title double-title">
+        <a routerLink="/order" [queryParams]="{product: formValues.productTitle + '1 '}">Хватит думать!</a> Доставим заказ за 30 минут!
+      </div>
+      <div class="order-text-message">
+        Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если мы опоздаем даже на
+        1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим
+        сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
+      </div>
+    </div>
+    <div class="order-form">
+      <p>
+        <tui-input tuiTextfieldSize="s" [tuiTextfieldCleaner]="true">
+          Type an email
+          <input autocomplete="email" tuiTextfield type="email"/>
+        </tui-input>
+      </p>
+      <!--      Вписываем атрибут coolInput в элемент, далее работаем с ним в директиве-->
+      <input type="text" class="order-input" coolInput id="product-input"
+             [coolInputDefaultBgColor]="'lightgray'"
+             [coolInputFocusBgColor]="'red'"
+             placeholder="Пицца" [(ngModel)]="formValues.productTitle">
+      <input type="text" class="order-input" coolInput id="address-input" placeholder="Адрес доставки" [(ngModel)]="formValues.address">
+      <input type="text" class="order-input" coolInput id="phone-input" placeholder="Телефон" [(ngModel)]="formValues.phone">
+      <button class="btn" (click)="createOrder()" tuiButton>Оформить заказ</button>
+    </div>
+    <div class="order-image">
+      <img src="assets/images/pizzzzza.png" alt="pizzzzza">
+    </div>
+  </div>
+</section>

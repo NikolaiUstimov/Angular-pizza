@@ -1,0 +1,33 @@
+.footer {
+  background-color: #ffffff;
+  box-shadow: 0 0 14px 1px rgba(152,152,152,0.2);
+  padding: 16px 0 15px 0;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+}
+
+.rights {
+  font-size: 12px;
+  line-height: 1.2;
+  color: #bab3b3;
+  margin-left: 358px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer .container {
+    justify-content: space-between;
+  }
+
+  .rights {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .rights {
+    margin-left: 20px;
+  }
+}
